@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="websystems.css">
+    <title>Website Comments</title>
+</head>
+
+<body>
+    <header>Web Assignment 31268 Websystem</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="past.html">My Past</a>
+        <a href="future.html">My Future</a>
+        <a href="comments.html" class="current-page">Comments</a>
+    </nav>
+
+    <main class="comments-content">
+        <h1>Website Comments</h1>
+        <p class="comments-intro">This page describes how the website is organised, how its styles work, and how
+            accessibility is supported.</p>
+
+        <div class="comments-index">
+            <p><strong>On this page</strong></p>
+            <ul>
+                <li><a href="#structure-heading">Website structure</a></li>
+                <li><a href="#pages-heading">Page details</a></li>
+                <li><a href="#styles-heading">CSS styles</a></li>
+                <li><a href="#design-heading">Visual design</a></li>
+                <li><a href="#accessibility-heading">Accessibility</a></li>
+            </ul>
+        </div>
+
+        <section class="comment-card" aria-labelledby="structure-heading">
+            <h2 id="structure-heading">1. Website structure</h2>
+            <p>The website has four pages connected by the same navigation menu. Each menu link opens a separate HTML
+                page, while <code>websystems.css</code> provides shared styles such as the navigation and footer.
+                All shared and page-specific styles are kept in this single stylesheet.</p>
+            <ul class="page-list">
+                <li><a href="index.html">Home</a> introduces me and my hobbies.</li>
+                <li><a href="past.html">My Past</a> describes my early experiences with technology and people who
+                    inspired me.</li>
+                <li><a href="future.html">My Future</a> describes my goals and ideas.</li>
+                <li><a href="comments.html">Comments</a> explains the website design.</li>
+            </ul>
+            <p>When a page opens, the browser reads its HTML structure, loads the shared stylesheet, and loads
+                images from the local <code>image</code> folder. The navigation uses relative links, so choosing
+                a page opens another HTML document in this assignment. The Home page also links to UTS in a new
+                tab and includes image-credit links. The site uses HTML and CSS rather than JavaScript: the
+                content is static, and the navigation and CSS hover/focus effects provide its interactions.</p>
+        </section>
+
+        <section class="comment-card" aria-labelledby="pages-heading">
+            <h2 id="pages-heading">2. Detailed contents of the three main pages</h2>
+            <p>The Home, My Past, and My Future pages share the same four navigation links and footer design. The
+                footer email is plain text on Home and a mail link on My Past and My Future. Each page has a main
+                heading and groups its content into sections. The lists below describe the visible content and page
+                elements in those three HTML files.</p>
+
+            <h3>How the page markup works</h3>
+            <p>Each file starts with a doctype and an English-language HTML document. Its head sets the character
+                encoding and responsive viewport, links <code>websystems.css</code>, and supplies the browser-tab
+                title. The body contains the site header, navigation, main content, and footer in that order. The
+                navigation links connect the four separate HTML files; the <code>current-page</code> class is placed
+                on the link for the page currently being viewed.</p>
+            <ul>
+                <li><strong>Home (<code>index.html</code>):</strong> the main content starts with the page heading and
+                    an <code>intro-layout</code> container. Its introduction section and campus-image section are
+                    arranged together, followed by a hobbies section. Each hobby uses a list and image grouped in a
+                    <code>hobby-list</code> container. The image <code>alt</code> attributes provide text
+                    alternatives. Its footer displays the email address as plain text.</li>
+                <li><strong>My Past (<code>past.html</code>):</strong> the main element uses
+                    <code>page-content past-content</code> classes to identify and lay out the page. Three story
+                    sections use IDs to target their headings and content. A fourth section contains a semantic
+                    table: its caption names the table, the header row labels each column, and the body rows pair
+                    each person with a field and explanation.</li>
+                <li><strong>My Future (<code>future.html</code>):</strong> the main element groups the future-goal
+                    sections and images. The dream section contains a nested subheading for the proposed extension.
+                    The concept image has alternative text and a descriptive paragraph. The later section contains
+                    future goals and a gallery made from <code>figure</code>, <code>img</code>, and
+                    <code>figcaption</code> elements, which keep each image paired with its caption.</li>
+            </ul>
+
+            <h3>Home — “Some Things About Me”</h3>
+            <ul>
+                <li><strong>Introduction:</strong> gives the name Alex and student ID 123456789; says this is Alex's
+                    first website and introduces learning HTML and CSS; describes studying Artificial Intelligence
+                    at the University of Technology Sydney, an interest in coding and problem-solving, and reading
+                    technology blogs and trying programming languages.</li>
+                <li><strong>University link:</strong> links to the University of Technology Sydney website.</li>
+                <li><strong>Campus photograph:</strong> shows the Dr Chau Chak Wing Building at UTS. Its alternative
+                    text is “Dr Chau Chak Wing Building at UTS.” A paragraph credits Summerdrought, links to the
+                    Wikimedia Commons image page, and identifies the CC BY-SA 4.0 licence.</li>
+                <li><strong>Hobbies:</strong> mentions soccer, spending time with friends, travel, movies, video
+                    games, and reading.</li>
+                <li><strong>Video games:</strong> includes a controller photograph with the alternative text “Video
+                    game controller” and a list of Roblox, Identity V, and Minecraft.</li>
+                <li><strong>Reading:</strong> includes a stack-of-books photograph with the alternative text “A stack
+                    of books” and a list of reading interests: technology (<em>Chip Wars</em> by A. Vise and Mark
+                    Mazzetti), science fiction (<em>Star Wars</em> by George Lucas), and self-improvement
+                    (<em>Atomic Habits</em> by James Clear).</li>
+                <li><strong>Footer:</strong> shows HCMUT · UTS, “Web Systems Assignment 2026,” and Alex's email
+                    address.</li>
+            </ul>
+
+            <h3>My Past — “My First Impression about Technology”</h3>
+            <ul>
+                <li><strong>A visit to my dad's programming lab:</strong> describes seeing robots and other
+                    technology projects, learning that technology can turn ideas into real things, and becoming
+                    interested in programming and possibly becoming a developer.</li>
+                <li><strong>Discovering coding at school:</strong> describes exploring the computer lab and learning
+                    Python, Scratch, and Pascal. It also explains that entrance-exam preparation interrupted coding
+                    practice, but the interest remained.</li>
+                <li><strong>Inspired by developers and designers:</strong> describes learning how people combine
+                    creativity, problem-solving, and technical skills, and becoming interested in both development
+                    and design.</li>
+                <li><strong>Developers and Designers Who Inspired Me:</strong> introduces a table with the columns
+                    Name, Field, and Why They Inspired Me. Its entries are:
+                    <ul>
+                        <li>Tim Berners-Lee — Computer Science; changed how people share information online.</li>
+                        <li>Grace Hopper — Programming; helped make programming easier to understand.</li>
+                        <li>Margaret Hamilton — Software Engineering; her Apollo software work demonstrated the
+                            importance of reliable systems.</li>
+                        <li>Susan Kare — UI Design; showed how design can make technology friendlier and easier to
+                            use.</li>
+                        <li>Don Norman — Human-Centered Design; showed why design should focus on people's needs
+                            and experiences.</li>
+                    </ul>
+                </li>
+                <li><strong>Page elements:</strong> uses four story/inspiration sections and a semantic data table;
+                    it contains no content images.</li>
+                <li><strong>Footer:</strong> shows HCMUT · UTS, “Web Systems Assignment 2026,” and Alex's linked
+                    email address.</li>
+            </ul>
+
+            <h3>My Future — “My Future”</h3>
+            <ul>
+                <li><strong>The dream I have for the future:</strong> describes wanting meaningful work, a positive
+                    impact, and the ability to solve problems and create useful solutions.</li>
+                <li><strong>“Mutilwork” extension:</strong> presents an idea for helping people communicate, work,
+                    and research while learning another language, and describes determination to work toward that
+                    goal.</li>
+                <li><strong>Concept illustration:</strong> shows a diagram of ways computers can connect in a
+                    network. Its alternative text is “Diagram showing different ways computers can connect in a
+                    network,” and the caption calls it a concept illustration for the proposed Mutilwork extension.</li>
+                <li><strong>Potential Developments:</strong> discusses future advances in artificial intelligence
+                    and renewable energy, including automating tasks and reducing reliance on fossil fuels.</li>
+                <li><strong>University goals:</strong> describes building a technology-project portfolio, joining a
+                    hackathon, meeting other students, improving communication skills, gaining internship or
+                    research experience, and continuing to grow.</li>
+                <li><strong>Image gallery:</strong> includes a programmer at a computer, with alternative text
+                    “Computer programmer working at a computer” and a career-in-technology caption; and college
+                    friends celebrating, with alternative text “College friends celebrating together” and a caption
+                    about building friendships and memories at university.</li>
+                <li><strong>Page elements:</strong> uses headings and paragraphs, a concept-image section, and a
+                    figure gallery with captions.</li>
+                <li><strong>Footer:</strong> shows HCMUT · UTS, “Web Systems Assignment 2026,” and Alex's linked
+                    email address.</li>
+            </ul>
+        </section>
+
+        <section class="comment-card" aria-labelledby="styles-heading">
+            <h2 id="styles-heading">3. How the CSS decorates the pages</h2>
+            <p><code>websystems.css</code> contains rules made from selectors and declarations. A selector chooses
+                matching HTML elements; declarations set their appearance or layout. Element selectors such as
+                <code>body</code> match HTML tags, class selectors such as <code>.future-gallery</code> match a
+                class, ID selectors such as <code>#Dream</code> match a unique ID, and pseudo-classes such as
+                <code>:hover</code> apply during an interaction. More specific selectors can style a child differently
+                from its parent. The shared rules below apply across pages when their selectors match; page-specific
+                rules only affect elements with the corresponding ID or class.</p>
+            <div class="table-wrap">
+                <table class="selector-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Page and CSS selector(s)</th>
+                            <th scope="col">How the rule supports the page</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All pages: <code>body</code>, <code>header</code>, <code>h1</code></td>
+                            <td><code>body</code> removes the browser's default outer margin and sets background
+                                <code>#f5f7fb</code>, text <code>#263248</code>, an Arial-family font, and
+                                <code>1.6</code> line-height. <code>header</code> creates the dark
+                                <code>#23232b</code> banner with pale text, <code>15px</code> padding, a centered
+                                <code>35px</code> Times-style title, and no outer margin. <code>h1</code> sets a
+                                shared <code>32px</code> title size, dark color, centered alignment, and
+                                <code>32px 16px</code> margin; the Comments page overrides the title margin,
+                                padding, and alignment.</td>
+                        </tr>
+                        <tr>
+                            <td>All pages: <code>nav</code>, <code>nav a</code>,
+                                <code>nav a:hover</code>, <code>nav a:focus-visible</code>,
+                                <code>nav a.current-page</code></td>
+                            <td>The navigation bar uses <code>position: sticky</code> and <code>top: 0</code> to
+                                remain at the top while scrolling, with <code>z-index: 1000</code> to layer it
+                                above page content. Flexbox centers the links, allows wrapping, and spaces them by
+                                <code>8px</code>. Each link has <code>8px 40px</code> padding, a
+                                <code>6px</code> radius, a semibold font, and no underline. Hover and keyboard
+                                focus use a pale background and indigo text; the active-page class keeps its
+                                highlight visible.</td>
+                        </tr>
+                        <tr>
+                            <td>All pages: <code>#footer</code>, <code>#footer h2</code>,
+                                <code>#footer p</code></td>
+                            <td><code>box-sizing: border-box</code> keeps the footer's padding and border inside
+                                its <code>100%</code> width. A <code>32px</code> top margin separates it from
+                                content; <code>24px</code> padding, a <code>4px solid #6366f1</code> top border,
+                                and a dark <code>#1e293b</code> background form the footer. The text is light,
+                                its top corners are rounded, and the heading and paragraphs receive smaller,
+                                separate margins and font sizes.</td>
+                        </tr>
+                        <tr>
+                            <td>Home: <code>.intro-layout</code>, <code>#Introduction</code>,
+                                <code>#image</code>, <code>#image img</code>,
+                                <code>#Introduction h2</code></td>
+                            <td><code>.intro-layout</code> uses Flexbox, top alignment, and a <code>40px</code>
+                                gap to place the introduction beside the campus photo. <code>#Introduction</code>
+                                uses a flexible basis, <code>20px</code> margin and padding, an
+                                <code>18px</code> font, white background, thin border, and <code>20px</code>
+                                rounded corners. <code>#image img</code> fills its container, has a fixed
+                                <code>400px</code> height, and uses <code>object-fit: cover</code> to crop to
+                                that frame; its white border and rounded corners match the panel style. The
+                                introduction heading is indigo. A later <code>#image</code> rule also sets its
+                                width and margin.</td>
+                        </tr>
+                        <tr>
+                            <td>Home: <code>#hobbies</code>, <code>#hobbies h2</code>,
+                                <code>.hobby-list</code>, <code>.hobby-image</code>,
+                                <code>.hobby-image img</code>, <code>.hobby-list ul</code></td>
+                            <td>The hobbies section is a white, bordered, rounded panel with
+                                <code>20px</code> margin and padding and <code>18px</code> text. Its heading has
+                                a lighter indigo accent. Each hobby row uses Flexbox with centered alignment and
+                                a <code>24px</code> gap to place image and list side by side. The image has a
+                                <code>160px</code> height, fills its flex item, crops with
+                                <code>object-fit: cover</code>, and gets a border, <code>10px</code> corners,
+                                and a subtle shadow. The list flexes to use remaining space and receives left
+                                indentation. The image container also has a width limit.</td>
+                        </tr>
+                        <tr>
+                            <td>My Past: <code>.past-content</code>, <code>span</code>,
+                                <code>#MyPast</code>, <code>#Experience</code>, <code>#MyWebsite</code>,
+                                <code>#CreatorBoard</code> and their <code>h2</code> headings</td>
+                            <td><code>.past-content</code> sets an <code>80%</code> content width, automatic
+                                side margins to center it, and <code>20px</code> padding. The story sections use
+                                <code>20px</code> margins and padding, white backgrounds, thin blue-grey borders,
+                                rounded corners, and <code>18px</code> text; the inspiration section has a similar
+                                panel style. Their headings use dark <code>#172033</code> text and
+                                <code>22px</code> type. The global <code>span</code> rule makes the coding-language
+                                names blue and bold.</td>
+                        </tr>
+                        <tr>
+                            <td>My Past: <code>.PeopleWhoInspiredMe</code>,
+                                <code>.PeopleWhoInspiredMe th</code>, <code>.PeopleWhoInspiredMe td</code></td>
+                            <td>The table fills its section, has <code>24px</code> space above it, and uses a
+                                light background, outer border, and rounded corners. Header and data cells have
+                                <code>12px 14px</code> padding and individual borders. Header cells use a darker
+                                tinted background, dark text, and left alignment; data cells have their own
+                                dark-grey text color and slightly smaller type. The HTML caption, table head,
+                                and table body organize the information independently of these visual styles.</td>
+                        </tr>
+                        <tr>
+                            <td>My Future: <code>#Dream</code>, <code>#MyFuture</code>,
+                                <code>#Dream h2</code>, <code>#Dream h3</code>,
+                                <code>#MyFuture h2</code>, <code>#Dream p</code>, <code>#MyFuture p</code></td>
+                            <td>The dream and future sections use white backgrounds, borders, rounded corners,
+                                <code>20px</code> padding, and <code>18px</code> text. Their headings are indigo;
+                                second-level headings are <code>24px</code>, and the nested dream heading is
+                                <code>20px</code>. Paragraphs have <code>10px</code> vertical margins and
+                                <code>18px</code> text. <code>#Dream</code> also has Flexbox sizing properties,
+                                but it is not currently a flex item because its parent is not a flex container.
+                                A later rule sets both sections' margins to <code>12px 0</code>, replacing their
+                                earlier margin values.</td>
+                        </tr>
+                        <tr>
+                            <td>My Future: <code>.image-future</code>,
+                                <code>.image-future img</code>, <code>.image-future p</code></td>
+                            <td><code>box-sizing: border-box</code> includes the section's border in its
+                                <code>35%</code> width. Automatic side margins center it, and a white
+                                background, thin border, and <code>12px</code> corners frame the concept. The
+                                image displays as a block at <code>100%</code> width and automatic height;
+                                <code>object-fit: contain</code> avoids cropping. Its paragraph caption has
+                                muted <code>#526078</code> text, <code>14px</code> type, padding, and centered
+                                alignment.</td>
+                        </tr>
+                        <tr>
+                            <td>My Future: <code>.future-gallery</code>,
+                                <code>.future-gallery figure</code>, <code>.future-gallery img</code>,
+                                <code>.future-gallery figcaption</code></td>
+                            <td>The gallery uses <code>display: flex</code> and
+                                <code>flex-wrap: wrap</code> to put figure cards in a row and move them onto
+                                another row when space is limited. Each figure uses
+                                <code>flex: 1 1 280px</code>, so it starts at a <code>280px</code> basis and
+                                can grow or shrink with the available row width. A <code>20px</code> gap and
+                                <code>28px</code> top margin separate the cards. Each figure clips overflow and
+                                has a white background, border, and <code>12px</code> corners. Its image fills
+                                the card at <code>220px</code> height and uses <code>object-fit: cover</code>;
+                                captions use padding, centered alignment, muted color, and <code>14px</code>
+                                type.</td>
+                        </tr>
+                        <tr>
+                            <td>Comments: <code>.comments-content</code>, <code>.comments-content h1</code>,
+                                <code>.comments-intro</code>, <code>.comment-card</code>,
+                                <code>.comment-card h2</code>, <code>.comment-card p</code>,
+                                <code>.comment-card ul</code>, <code>.comment-card li</code></td>
+                            <td>These rules provide page padding and set the Comments title and introduction
+                                alignment. They control the spacing of each explanation section, its indigo
+                                subheadings, paragraphs, and nested lists. The cards are spaced sections; the
+                                current CSS does not give them a separate card background or border.</td>
+                        </tr>
+                        <tr>
+                            <td>Comments: <code>.table-wrap</code>, <code>.selector-table</code>,
+                                <code>.selector-table th</code>, <code>.selector-table td</code>,
+                                <code>.selector-table code</code></td>
+                            <td>The wrapper uses <code>overflow-x: auto</code> so a wide table can scroll
+                                horizontally instead of forcing the whole page wider. The table fills its
+                                container, has a white background, and collapses adjacent borders into one.
+                                Cells receive <code>10px 12px</code> padding, thin borders, left alignment, and
+                                top alignment. Header cells use a tinted background and dark text. The
+                                <code>overflow-wrap: anywhere</code> rule lets long code selectors break at
+                                smaller widths.</td>
+                        </tr>
+                        <tr>
+                            <td>Comments: <code>.comment-card a</code>,
+                                <code>.comment-card a:focus-visible</code></td>
+                            <td>Links in the explanations use indigo text. Keyboard focus adds a visible outline
+                                with an offset so the focused link is easy to identify.</td>
+                        </tr>
+                        <tr>
+                            <td>Defined but not currently matched: <code>.creator-card</code> and its
+                                <code>h3</code>/<code>p</code> rules, <code>.future-intro</code>,
+                                <code>.future-concept</code> and its <code>p</code>/<code>img</code> rules</td>
+                            <td><code>.creator-card</code> would create a padded, bordered light card; its
+                                <code>h3</code> and <code>p</code> rules set heading and text sizes, colors, and
+                                margins. <code>.future-intro</code> sets <code>align-items: stretch</code>, which
+                                only affects children if the element is a flex or grid container.
+                                <code>.future-concept</code> would set margins, style a caption paragraph, and
+                                limit an image to <code>280px</code> high. The current HTML files do not use
+                                those class names, so these declarations do not decorate the current pages.
+                                The similarly named <code>.image-future</code> class is used by My Future and
+                                is styled separately above.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>How the CSS layout and cascade work</h3>
+            <ul>
+                <li><strong>Spacing and the box model:</strong> <code>margin</code> creates space outside an
+                    element; <code>padding</code> creates space between its content and border. Borders,
+                    backgrounds, text color, font size, and line height provide the visual treatment. For
+                    example, the white section panels use padding to keep text away from their edges and margins
+                    to separate them from neighboring content.</li>
+                <li><strong>Selector matching and the cascade:</strong> a rule only affects elements matched by
+                    its selector. IDs target specific sections, while reusable classes can group related
+                    elements. When selectors of equal specificity set the same property, a later declaration
+                    wins. In this stylesheet, later rules change the final margins of <code>#Dream</code> and
+                    <code>#MyFuture</code>; the table explains that override where it applies.</li>
+                <li><strong>Layout systems:</strong> Flexbox lays out direct children of a flex container along
+                    a row or column and distributes available space. This is used for the Home introduction and
+                    hobby rows, and wraps the My Future gallery figures onto new rows when needed. The My Past
+                    content and most other sections use normal document flow, which stacks block elements
+                    vertically. A <code>flex</code> declaration has no flex-item effect unless the element's
+                    parent is a flex container.</li>
+                <li><strong>Images and page width:</strong> <code>object-fit: cover</code> fills a fixed frame
+                    by cropping excess image area; <code>contain</code> keeps the whole image visible. The
+                    future gallery's wrapping Flexbox lets its figures share a row when there is room and move
+                    to another row when there is not, without a media query. The stylesheet has no explicit
+                    breakpoint rules, so other layouts may need additional testing and responsive adjustments
+                    on narrow screens.</li>
+            </ul>
+        </section>
+
+        <section class="comment-card" aria-labelledby="design-heading">
+            <h2 id="design-heading">4. Visual design</h2>
+            <ul>
+                <li><strong>Shared identity:</strong> the light blue-grey page background
+                    (<code>#f5f7fb</code>) and dark blue-grey text (<code>#263248</code>) provide a consistent
+                    base. White panels, thin blue-grey borders, and rounded corners separate content without
+                    changing the shared page structure.</li>
+                <li><strong>Color accents and hierarchy:</strong> indigo (<code>#3730a3</code> and
+                    <code>#6366f1</code>) highlights headings, current navigation, focus states, and the footer
+                    border. Font size, weight, color, and spacing distinguish page titles, section headings,
+                    body text, captions, and table labels.</li>
+                <li><strong>Page-specific layouts:</strong> Home puts introduction text beside a campus image
+                    and places hobby images beside lists. My Past uses vertically flowing story panels and a
+                    structured comparison table. My Future emphasizes its concept illustration and arranges
+                    the two gallery images in a Flexbox row that can wrap onto another row.</li>
+                <li><strong>Consistent finishing:</strong> the sticky navigation keeps page links available
+                    while scrolling. The dark footer and indigo top border close each page with a repeated
+                    visual element. Hover and focus states provide feedback when links are pointed at or
+                    reached by keyboard.</li>
+            </ul>
+            <p>The stylesheet has no media queries. The navigation and future gallery can wrap as space changes,
+                but other layouts do not have separate breakpoint rules and should be checked on narrow screens.</p>
+        </section>
+
+        <section class="comment-card" aria-labelledby="accessibility-heading">
+            <h2 id="accessibility-heading">5. Accessibility</h2>
+            <ul>
+                <li><strong>Document setup:</strong> each page declares English as its document language, UTF-8
+                    text encoding, and a viewport setting so browsers can scale the page to the device width.</li>
+                <li><strong>Structure:</strong> header, navigation, main, and footer elements identify the main
+                    page landmarks. Headings and sections divide information into a hierarchy, and the Comments
+                    page's section headings are connected to their sections with <code>aria-labelledby</code>.</li>
+                <li><strong>Images:</strong> content images on Home and My Future include descriptive
+                    <code>alt</code> text, so their subjects can be understood if the image is unavailable or
+                    when a screen reader is used. My Past and Comments do not use content images.</li>
+                <li><strong>Links and keyboard use:</strong> anchors provide native keyboard navigation. The
+                    shared navigation has visible hover and keyboard-focus styling; links in the Comments
+                    explanations also receive a visible focus outline. The <code>current-page</code> class
+                    visually highlights the active link.</li>
+                <li><strong>Tables:</strong> both tables use a caption or header row to explain their content,
+                    with header cells separating column labels from data. The Comments table also uses
+                    <code>scope="col"</code> to associate its column headings with their columns.</li>
+            </ul>
+            <p>If CSS is turned off, the text, headings, lists, tables, and links remain in the document and the
+                navigation still works. The colours, spacing, borders, and page layouts provided by CSS are lost.</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <h2>HCMUT · UTS</h2>
+        <p>Web Systems Assignment 2026</p>
+        <p><a href="mailto:Alexthestudent@student.uts.edu.au">Alexthestudent@student.uts.edu.au</a></p>
+    </footer>
+</body>
+
+</html>

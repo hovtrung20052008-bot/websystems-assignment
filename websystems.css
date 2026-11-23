@@ -1,0 +1,602 @@
+body {
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #263248;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+header{
+    margin: 0;
+    padding: 15px;
+    background-color: #23232b;
+    color: #ffdfdf;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 24px;
+    margin: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+nav a {
+    padding: 8px 40px;
+    border-radius: 6px;
+    color: #344054;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #f1f5f9;
+    color: #3730a3;
+}
+
+nav a.current-page {
+    color: #3730a3;
+    background-color: #eef2ff;
+}
+
+h1 {
+    margin: 32px 16px;
+    padding: 12px 20px;
+    color: #263248;
+    font-size: 32px;
+    text-align: center;
+}
+
+.intro-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+#Introduction {
+    flex: 1 3 40%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #dfe5ef;
+    border-radius: 20px;
+}
+
+#image {
+    flex: 10 1 35%;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 0;
+}
+
+#image img {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+#Introduction h2 {
+    color: rgb(74, 74, 150);
+}
+
+#hobbies {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #dfe5ef;
+    border-radius: 20px;
+}
+
+#hobbies h2 {
+    color: rgb(98, 98, 171);
+
+    
+}
+
+
+
+.hobby-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0 24px;
+}
+
+.hobby-image {
+    flex: 0 4 244px;
+    margin: 0;
+}
+
+.hobby-image img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #ac9898;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(38 50 72 / 10%);
+}
+
+.hobby-list ul {
+    flex: 1;
+    margin: 0;
+    padding-left: 24px;
+}
+
+    #image {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .hobby-image {
+        width: min(100%, 320px);
+    }
+
+#footer {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 32px 0 0;
+    padding: 24px;
+    border-top: 4px solid #6366f1;
+    border-radius: 12px 12px 0 0;
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+#footer h2 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#footer p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* My Past page */
+.past-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+span{
+    color: blue;
+    font-weight: bold;
+}
+#MyPast,
+#Experience {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgba(155, 176, 178, 0.986);
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+#MyPast h2,
+#Experience h2,
+#MyWebsite h2 {
+    margin-top: 1px;
+    color: #172033;
+    font-size: 22px;
+}
+
+#MyWebsite {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgba(150, 190, 194, 0.986);
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+#CreatorBoard {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid rgba(155, 176, 178, 0.986);
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+#CreatorBoard h2 {
+    margin-top: 1px;
+    color: #172033;
+    font-size: 22px;
+}
+
+.creator-card {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+.creator-card h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.creator-card p {
+    margin: 0 0 10px;
+    color: #3730a3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.PeopleWhoInspiredMe {
+    width: 100%;
+    margin-top: 24px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.PeopleWhoInspiredMe th {
+    padding: 12px 14px;
+    border: 1px solid #dbe3ec;
+    background-color: #e2e8f0;
+    color: #172033;
+    font-size: 16px;
+    text-align: left;
+}
+
+.PeopleWhoInspiredMe td {
+    padding: 12px 14px;
+    border: 1px solid #dbe3ec;
+    color: #1f2937;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* My Future page */
+
+
+.future-intro {
+    align-items: stretch;
+}
+
+#Dream,
+#MyFuture {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #dfe5ef;
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+#Dream {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+#Dream h2,
+#MyFuture h2,
+#Dream h3 {
+    margin-top: 0;
+    color: #3730a3;
+    font-family: Arial, sans-serif;
+}
+
+#Dream h2 {
+    font-size: 24px;
+}
+
+#MyFuture h2 {
+    font-size: 24px;
+}
+
+#Dream h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+#Dream p,
+#MyFuture p {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.image-future {
+    box-sizing: border-box;
+    width: 35%;
+    margin: 25px auto;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.image-future img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.image-future p {
+    margin: 0;
+    padding: 12px 16px;
+    color: #526078;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+.future-concept p {
+    margin: 0;
+    padding: 12px 16px;
+    color: #526078;
+    font-size: 14px;
+    text-align: center;
+}
+
+#MyFuture {
+    margin-top: 20px;
+}
+
+.future-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.future-gallery figure {
+    flex: 1 1 280px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.future-gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.future-gallery figcaption {
+    padding: 12px 16px;
+    color: #526078;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+    #Dream,
+    #MyFuture,
+    .future-concept {
+        margin: 12px 0;
+    }
+
+    .future-concept img {
+        max-height: 280px;
+    }
+
+
+/* Comments page */
+.comments-content {
+    margin: 0;
+    padding: 16px;
+}
+
+.comments-content h1 {
+    margin: 20px;
+    padding: 0;
+    text-align: left;
+}
+
+.comments-intro {
+    margin: 12px;
+    text-align: left;
+}
+
+.comment-card {
+    margin: 10px;
+    padding: 0;
+}
+
+.comment-card h2 {
+    margin: 4px;
+    color: #3730a3;
+    font-size: 21px;
+}
+
+.comment-card p {
+    margin: 6px;
+}
+
+.comment-card ul {
+    margin: 8px;
+    padding-left: 24px;
+}
+
+.comment-card li {
+    margin: 2px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.selector-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.selector-table th,
+.selector-table td {
+    padding: 10px 12px;
+    border: 1px solid #dbe3ec;
+    text-align: left;
+    vertical-align: top;
+}
+
+.selector-table th {
+    background-color: #e2e8f0;
+    color: #172033;
+}
+
+.selector-table code {
+    overflow-wrap: anywhere;
+}
+
+.comment-card a {
+    color: #3730a3;
+}
+
+.comment-card a:focus-visible {
+    outline: 2px solid #3730a3;
+    outline-offset: 3px;
+}
+
+/* Simple, readable layout for the Comments page */
+.comments-content {
+    box-sizing: border-box;
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    padding: 20px 24px 36px;
+}
+
+.comments-content > h1 {
+    margin: 12px 0;
+    padding: 16px 20px;
+    border-left: 5px solid #6366f1;
+    border-radius: 8px;
+    background-color: #eef2ff;
+    text-align: left;
+}
+
+.comments-intro {
+    margin: 12px 0 20px;
+    padding: 14px 18px;
+    border: 1px solid #dfe5ef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 17px;
+}
+
+.comments-index {
+    margin: 16px 0 24px;
+    padding: 12px 18px;
+    border: 1px solid #dfe5ef;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.comments-index p {
+    margin: 0 0 8px;
+    color: #172033;
+}
+
+.comments-index ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.comments-index li {
+    margin: 0;
+}
+
+.comment-card {
+    margin: 18px 0;
+    padding: 20px 24px;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgb(38 50 72 / 6%);
+}
+
+.comment-card h2 {
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e7ff;
+    font-size: 22px;
+}
+
+.comment-card h3 {
+    margin: 24px 0 8px;
+    color: #263248;
+    font-size: 18px;
+}
+
+.comment-card p {
+    margin: 8px 0 12px;
+}
+
+.comment-card ul {
+    margin: 8px 0 16px;
+    padding-left: 26px;
+}
+
+.comment-card li {
+    margin: 5px 0;
+}
+
+.comment-card .table-wrap {
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+.comment-card .selector-table {
+    min-width: 680px;
+}
+
+.comment-card .selector-table th {
+    background-color: #eef2ff;
+    color: #263248;
+}
+
+.comment-card .selector-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.comment-card .selector-table td:first-child {
+    width: 34%;
+}
+
+.comment-card code {
+    padding: 1px 4px;
+    border-radius: 4px;
+    background-color: #f1f5f9;
+    color: #3730a3;
+    overflow-wrap: anywhere;
+}
